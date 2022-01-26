@@ -9,7 +9,7 @@ import foo from './module.js';
 
   // Lodash, currently included via a script, is required for this line to work
   // Lodash, now imported by this script
-   element.innerHTML = ['Hello', 'webpack', foo()].joing(' ');
+   element.innerHTML = ['Hello', 'webpack', foo()].join(' ');
 
 
   // Create your app
