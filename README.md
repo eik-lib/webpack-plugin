@@ -177,7 +177,7 @@ This plugin takes the following options:
 
 ## Note on ESM with WebPack
 
-This plugin will only apply import maps to ESM modules. Due to this its more or less given that the source of your build must be ESM and that your build output is ESM. WebPack does by defailt __not__ output ESM so this needs to be configured.
+This plugin will only apply import maps to ESM modules. Due to this its more or less given that the source of your build must be ESM and that your build output is ESM. WebPack does __not__ by default output ESM so this needs to be configured.
 
 You enable ESM output in WebPack as follow ([reference](https://webpack.js.org/configuration/output/#outputmodule)):
 
