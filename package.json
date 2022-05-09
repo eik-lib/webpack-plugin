@@ -45,7 +45,7 @@
     "memfs": "3.4.1"
   },
   "dependencies": {
-    "@eik/common": "3.0.0",
+    "@eik/common": "3.0.1",
     "undici": "5.1.0"
   }
 }
