@@ -1,3 +1,10 @@
+## [1.0.29](https://github.com/eik-lib/webpack-plugin/compare/v1.0.28...v1.0.29) (2023-02-13)
+
+
+### Bug Fixes
+
+* **deps:** update dependency undici to v5.18.0 ([842628d](https://github.com/eik-lib/webpack-plugin/commit/842628d580bca6a8fdc5fb3e104f68ade57c5cfc))
+
 ## [1.0.28](https://github.com/eik-lib/webpack-plugin/compare/v1.0.27...v1.0.28) (2023-02-06)
 
 
