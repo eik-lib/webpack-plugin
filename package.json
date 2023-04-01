@@ -32,7 +32,7 @@
   },
   "homepage": "https://github.com/eik-lib/webpack-plugin#readme",
   "devDependencies": {
-    "@semantic-release/changelog": "6.0.2",
+    "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
     "webpack": "5.75.0",
     "webpack-cli": "4.10.0",
