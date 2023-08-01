@@ -42,7 +42,7 @@
     "fastify": "3.29.5",
     "semantic-release": "19.0.5",
     "tap": "15.2.3",
-    "memfs": "3.5.1"
+    "memfs": "3.5.3"
   },
   "dependencies": {
     "@eik/common": "3.0.1",
