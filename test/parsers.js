@@ -232,7 +232,6 @@ tap.test('.standardImport() - importStar case', (t) => {
     t.end();
 });
 
-
 tap.test('.dynamicImport() - Single qoutes', (t) => {
     const rx = dynamicImport('m');
     const str = 'var promise = import(\'module-name\');';
