@@ -14,14 +14,14 @@ exports[`test/parsers.js TAP .standardImport() - Multiline "export" values > sho
 `
 
 exports[`test/parsers.js TAP .standardImport() - Multiple import statements concatinated > should be the "export" group 1`] = `
-{ 
+{
             export3,
             export4,
         }
 `
 
 exports[`test/parsers.js TAP .standardImport() - Multiple import statements on new lines > should be the "export" group 1`] = `
-{ 
+{
             export3,
             export4,
         }
