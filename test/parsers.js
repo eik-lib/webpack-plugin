@@ -166,7 +166,7 @@ tap.test('.standardImport() - Multiple import statements on new lines', (t) => {
     const str = `
         import{ export1 }from "module-a";
         import {export2} from"module-b"
-        import { 
+        import {
             export3,
             export4,
         } from "module-c";
@@ -190,7 +190,7 @@ tap.test('.standardImport() - Multiple import statements on new lines', (t) => {
 tap.test('.standardImport() - Multiple import statements concatinated', (t) => {
     const rx = standardImport();
     const str = `
-        import{ export1 }from "module-a";import {export2} from"module-b"import { 
+        import{ export1 }from "module-a";import {export2} from"module-b"import {
             export3,
             export4,
         } from "module-c";
@@ -208,6 +208,14 @@ tap.test('.standardImport() - Multiple import statements concatinated', (t) => {
     t.equal(grp[2][1], 'import', 'should be the "import" group');
     t.matchSnapshot(grp[2][2], 'should be the "export" group');
     t.equal(grp[2][4], 'module-c', 'should be the "module name" group of the 3rd import');
+    t.end();
+});
+
+tap.test('.standardImport() - is lazy', (t) => {
+    const rx = standardImport();
+    const str = 'imported to know which is which from "f asfasdf asdfasdf asdfasdf adsfasdf"';
+    const grp = str.match(rx);
+    t.equal(grp, null, `should not match ${str}`);
     t.end();
 });
 
