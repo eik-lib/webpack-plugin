@@ -1,3 +1,19 @@
+## [1.0.37](https://github.com/eik-lib/webpack-plugin/compare/v1.0.36...v1.0.37) (2024-01-22)
+
+
+### Bug Fixes
+
+* **deps:** update dependency undici to v5.25.2 ([93e0e5c](https://github.com/eik-lib/webpack-plugin/commit/93e0e5cb0bd689416c78692ce855d28b804a7ae4))
+* **deps:** update dependency undici to v5.25.3 ([89d1c9f](https://github.com/eik-lib/webpack-plugin/commit/89d1c9ff512608cb82b534ac271011db88094a52))
+* **deps:** update dependency undici to v5.25.4 ([c2a4151](https://github.com/eik-lib/webpack-plugin/commit/c2a415167aa9fc8653fd1c2898230f60d3e66177))
+* **deps:** update dependency undici to v5.26.3 ([43c78cd](https://github.com/eik-lib/webpack-plugin/commit/43c78cd38983f05df170feeb8cf3425b3cb76818))
+* **deps:** update dependency undici to v5.26.4 ([968ab49](https://github.com/eik-lib/webpack-plugin/commit/968ab49bb162ca550c5861d26d3baf7bba87f070))
+* **deps:** update dependency undici to v5.27.0 ([dc0446f](https://github.com/eik-lib/webpack-plugin/commit/dc0446f29e2532291639aa8617550a72548798d9))
+* **deps:** update dependency undici to v5.28.0 ([fe55aa3](https://github.com/eik-lib/webpack-plugin/commit/fe55aa32b0ffda161ef664fa48dd5dbe3ed14134))
+* **deps:** update dependency undici to v5.28.2 ([6a0503a](https://github.com/eik-lib/webpack-plugin/commit/6a0503aa4df43a34346e49599a346685595619d1))
+* make export group matching stricter ([a8cbb8f](https://github.com/eik-lib/webpack-plugin/commit/a8cbb8fadbded4fec3aa4df91d1610a8fbebbaa0))
+* make string matcher more precise ([8ffdfa6](https://github.com/eik-lib/webpack-plugin/commit/8ffdfa669d05808f0651c30447ad5a0208f6f542))
+
 ## [1.0.36](https://github.com/eik-lib/webpack-plugin/compare/v1.0.35...v1.0.36) (2023-09-11)
 
 
