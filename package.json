@@ -41,7 +41,7 @@
     "eslint-plugin-import": "2.29.1",
     "fastify": "4.26.2",
     "semantic-release": "21.1.2",
-    "tap": "16.3.10",
+    "tap": "18.8.0",
     "memfs": "4.9.2"
   },
   "dependencies": {
