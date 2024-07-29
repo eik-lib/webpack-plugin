@@ -78,7 +78,10 @@ tap.test("loader() - import map fetched from a URL", async (t) => {
       },
     });
   });
-  const address = await app.listen();
+  const address = await app.listen({
+    host: "0.0.0.0",
+    port: 52023,
+  });
 
   const bundle = await build({
     inputEntry: FILE,
@@ -111,7 +114,10 @@ tap.test("loader() - import map fetched from a URL via eik.json", async (t) => {
       },
     });
   });
-  const address = await app.listen();
+  const address = await app.listen({
+    host: "0.0.0.0",
+    port: 52024,
+  });
 
   await fs.promises.writeFile(
     path.join(process.cwd(), "eik.json"),
@@ -150,7 +156,10 @@ tap.test(
       });
     });
 
-    const address = await app.listen();
+    const address = await app.listen({
+      host: "0.0.0.0",
+      port: 52024,
+    });
 
     await fs.promises.writeFile(
       path.join(process.cwd(), "eik.json"),
@@ -210,7 +219,10 @@ tap.test(
       });
     });
 
-    const address = await app.listen();
+    const address = await app.listen({
+      host: "0.0.0.0",
+      port: 52028,
+    });
 
     await fs.promises.writeFile(
       path.join(process.cwd(), "eik.json"),

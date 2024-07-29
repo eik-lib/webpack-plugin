@@ -8,8 +8,8 @@
     "src"
   ],
   "scripts": {
-    "test": "tap --no-coverage",
-    "test:snapshot": "TAP_SNAPSHOT=1 tap --no-coverage",
+    "test": "tap --allow-empty-coverage",
+    "test:snapshot": "TAP_SNAPSHOT=1 tap --allow-empty-coverage",
     "lint": "eslint ."
   },
   "repository": {
@@ -40,8 +40,8 @@
     "eslint-plugin-prettier": "5.1.3",
     "fastify": "4.28.1",
     "globals": "15.8.0",
-    "semantic-release": "21.1.2",
-    "tap": "16.3.10",
+    "semantic-release": "24.0.0",
+    "tap": "21.0.0",
     "memfs": "4.9.3"
   },
   "dependencies": {
