@@ -1,15 +1,15 @@
-const { helpers } = require("@eik/common");
-const utils = require("./utils.cjs");
-const {
+import { helpers } from "@eik/common";
+import * as utils from "./utils.js";
+import {
   standardImport,
   dynamicImport,
   sideEffectsImport,
-} = require("./builders.cjs");
+} from "./builders.js";
 
 const dictionary = new Map();
 let cold = true;
 
-async function loader(source) {
+export default async function loader(source) {
   const options = this.getOptions();
   const callback = this.async();
 
@@ -65,4 +65,3 @@ async function loader(source) {
       callback(null, obj.source);
     });
 }
-module.exports = loader;

@@ -1,6 +1,11 @@
-const { request } = require("undici");
+import { request } from "undici";
 
-const isBare = (str) => {
+/**
+ * Whether or not a string looks like a bare import.
+ * @param {string} str
+ * @returns {boolean}
+ */
+export const isBare = (str) => {
   if (
     str.startsWith("/") ||
     str.startsWith("./") ||
@@ -12,12 +17,19 @@ const isBare = (str) => {
   }
   return true;
 };
-module.exports.isBare = isBare;
 
-const isString = (str) => typeof str === "string";
-module.exports.isString = isString;
+/**
+ * Runs typeof
+ * @param {any} str
+ * @returns {boolean}
+ */
+export const isString = (str) => typeof str === "string";
 
-const validate = (map) =>
+/**
+ * @param {any} map
+ * @returns {Array<{ key: string; value: string }>}
+ */
+export const validate = (map) =>
   Object.keys(map.imports).map((key) => {
     const value = map.imports[key];
 
@@ -29,9 +41,13 @@ const validate = (map) =>
 
     return { key, value };
   });
-module.exports.validate = validate;
 
-const fetchImportMaps = async (urls = []) => {
+/**
+ *
+ * @param {string[]} [urls=[]]
+ * @returns
+ */
+export const fetchImportMaps = async (urls = []) => {
   try {
     const maps = urls.map(async (map) => {
       const { statusCode, body } = await request(map, { maxRedirections: 2 });
@@ -53,4 +69,3 @@ const fetchImportMaps = async (urls = []) => {
     );
   }
 };
-module.exports.fetchImportMaps = fetchImportMaps;

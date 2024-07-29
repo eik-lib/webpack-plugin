@@ -3,13 +3,13 @@ import {
   standardImport,
   dynamicImport,
   sideEffectsImport,
-} from "../src/builders.cjs";
+} from "../src/builders.js";
 
 tap.test(".standardImport() - Replace module name", (t) => {
   const source = `
         import{ export1 }from "module-a";
         import {export2} from 'module-b';
-        import { 
+        import {
             export3,
             export4,
         } from "module-c";

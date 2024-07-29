@@ -26,7 +26,7 @@ exports[`test/builders.test.js > TAP > .standardImport() - Replace module name >
 
         import { export1 } from './REPLACED-A.js';
         import {export2} from 'module-b';
-        import { 
+        import {
             export3,
             export4,
         } from './REPLACED-C.js';

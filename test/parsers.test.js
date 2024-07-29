@@ -3,7 +3,7 @@ import {
   standardImport,
   dynamicImport,
   sideEffectsImport,
-} from "../src/parsers.cjs";
+} from "../src/parsers.js";
 
 // Standard examples from: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import
 
