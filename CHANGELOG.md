@@ -1,3 +1,20 @@
+# [2.0.0](https://github.com/eik-lib/webpack-plugin/compare/v1.0.39...v2.0.0) (2024-07-29)
+
+
+### Bug Fixes
+
+* update to undici v6 ([60108f3](https://github.com/eik-lib/webpack-plugin/commit/60108f311b5fda1e42b812e99682d14ea8da0e47))
+
+
+### Code Refactoring
+
+* update internals to be esm ([0adb362](https://github.com/eik-lib/webpack-plugin/commit/0adb3624d8c6e6ff3408ebdd5d5aa2177b8ffd14))
+
+
+### BREAKING CHANGES
+
+* this module is now ESM
+
 ## [1.0.39](https://github.com/eik-lib/webpack-plugin/compare/v1.0.38...v1.0.39) (2024-04-08)
 
 
