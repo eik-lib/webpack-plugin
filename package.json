@@ -8,7 +8,7 @@
     "src"
   ],
   "scripts": {
-    "test": "tap --allow-empty-coverage",
+    "test": "tap --disable-coverage --allow-empty-coverage",
     "test:snapshot": "TAP_SNAPSHOT=1 tap --allow-empty-coverage",
     "lint": "eslint ."
   },
