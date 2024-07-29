@@ -6,7 +6,7 @@ import path from "node:path";
 import tap from "tap";
 import fs from "node:fs";
 
-const LOADER = new URL("../src/loader.cjs", import.meta.url).pathname;
+const LOADER = new URL("../src/loader.js", import.meta.url).pathname;
 const FILE = new URL("../fixtures/modules/simple/main.js", import.meta.url)
   .pathname;
 
