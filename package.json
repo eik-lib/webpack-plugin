@@ -42,7 +42,7 @@
     "globals": "15.8.0",
     "semantic-release": "24.0.0",
     "tap": "21.0.0",
-    "memfs": "4.9.3"
+    "memfs": "4.11.1"
   },
   "dependencies": {
     "@eik/common": "3.0.1",
