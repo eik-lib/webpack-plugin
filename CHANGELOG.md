@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/eik-lib/webpack-plugin/compare/v2.0.1...v2.0.2) (2024-08-09)
+
+
+### Bug Fixes
+
+* include type definitions ([9cb597b](https://github.com/eik-lib/webpack-plugin/commit/9cb597b0ef3ce0a0db70d7ffbfc62b3e245d55f5))
+
 ## [2.0.1](https://github.com/eik-lib/webpack-plugin/compare/v2.0.0...v2.0.1) (2024-07-31)
 
 
