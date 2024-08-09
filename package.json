@@ -10,6 +10,7 @@
     "types"
   ],
   "scripts": {
+    "clean": "rimraf .tap node_modules types",
     "test": "tap --disable-coverage --allow-empty-coverage",
     "test:snapshot": "TAP_SNAPSHOT=1 tap --allow-empty-coverage",
     "lint": "eslint .",
@@ -46,6 +47,7 @@
     "memfs": "4.11.1",
     "npm-run-all": "4.1.5",
     "prettier": "3.3.3",
+    "rimraf": "6.0.1",
     "semantic-release": "24.0.0",
     "tap": "21.0.0",
     "typescript": "5.5.4",
