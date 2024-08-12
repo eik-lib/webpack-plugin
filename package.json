@@ -56,6 +56,6 @@
   },
   "dependencies": {
     "@eik/common": "3.0.1",
-    "undici": "6.19.5"
+    "undici": "6.19.7"
   }
 }
