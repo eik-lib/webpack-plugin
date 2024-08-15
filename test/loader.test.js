@@ -1,14 +1,23 @@
 import { createFsFromVolume, Volume } from "memfs";
-import { URL } from "node:url";
+import { fileURLToPath } from "node:url";
 import webpack from "webpack";
 import fastify from "fastify";
 import path from "node:path";
 import tap from "tap";
 import fs from "node:fs";
 
-const LOADER = new URL("../src/loader.js", import.meta.url).pathname;
-const FILE = new URL("../fixtures/modules/simple/main.js", import.meta.url)
-	.pathname;
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const LOADER = path.resolve(__dirname, "..", "src", "loader.js");
+const FILE = path.resolve(
+	__dirname,
+	"..",
+	"fixtures",
+	"modules",
+	"simple",
+	"main.js",
+);
 
 /*
  * When running tests on Windows, the output code get some extra \r on each line.
@@ -83,6 +92,9 @@ tap.test("loader() - import map fetched from a URL", async (t) => {
 		host: "0.0.0.0",
 		port: 52023,
 	});
+	t.after(async () => {
+		await app.close();
+	});
 
 	const bundle = await build({
 		inputEntry: FILE,
@@ -99,7 +111,6 @@ tap.test("loader() - import map fetched from a URL", async (t) => {
 	});
 
 	t.matchSnapshot(clean(bundle), "import maps from urls");
-	await app.close();
 	t.end();
 });
 
@@ -134,13 +145,16 @@ tap.test("loader() - import map fetched from a URL via eik.json", async (t) => {
 		}),
 	);
 
+	t.after(async () => {
+		await app.close();
+		await fs.promises.unlink(path.join(process.cwd(), "eik.json"));
+	});
+
 	const bundle = await build({
 		inputEntry: FILE,
 	});
 
 	t.matchSnapshot(clean(bundle), "eik.json import-map string");
-	await app.close();
-	await fs.promises.unlink(path.join(process.cwd(), "eik.json"));
 	t.end();
 });
 
@@ -176,6 +190,11 @@ tap.test(
 			}),
 		);
 
+		t.after(async () => {
+			await app.close();
+			await fs.promises.unlink(path.join(process.cwd(), "eik.json"));
+		});
+
 		const bundle = await build({
 			inputEntry: FILE,
 			options: {
@@ -193,8 +212,6 @@ tap.test(
 			clean(bundle),
 			"Should rewrite import statement to https://cdn.eik.dev/lit-element/v2",
 		);
-		await app.close();
-		await fs.promises.unlink(path.join(process.cwd(), "eik.json"));
 		t.end();
 	},
 );
@@ -239,6 +256,11 @@ tap.test(
 			}),
 		);
 
+		t.after(async () => {
+			await app.close();
+			await fs.promises.unlink(path.join(process.cwd(), "eik.json"));
+		});
+
 		const bundle = await build({
 			inputEntry: FILE,
 			options: {
@@ -250,8 +272,6 @@ tap.test(
 			clean(bundle),
 			"Should rewrite import statement to https://cdn.eik.dev/lit-element/v2",
 		);
-		await app.close();
-		await fs.promises.unlink(path.join(process.cwd(), "eik.json"));
 		t.end();
 	},
 );
@@ -277,7 +297,10 @@ tap.test(
 			});
 		});
 
-		const address = await app.listen();
+		const address = await app.listen({
+			host: "0.0.0.0",
+			port: 52028,
+		});
 
 		await fs.promises.writeFile(
 			path.join(process.cwd(), "eik.json"),
@@ -292,6 +315,11 @@ tap.test(
 				"import-map": `${address}/one`,
 			}),
 		);
+
+		t.after(async () => {
+			await app.close();
+			await fs.promises.unlink(path.join(process.cwd(), "eik.json"));
+		});
 
 		const bundle = await build({
 			inputEntry: FILE,
@@ -311,8 +339,6 @@ tap.test(
 			clean(bundle),
 			"Should rewrite import statement to https://cdn.eik.dev/lit-element/v2",
 		);
-		await app.close();
-		await fs.promises.unlink(path.join(process.cwd(), "eik.json"));
 		t.end();
 	},
 );
