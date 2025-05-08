@@ -10,6 +10,11 @@ const dictionary = new Map();
 let cold = true;
 
 /**
+ * @typedef {object} ImportMap
+ * @property {Record<string, string>} imports
+ */
+
+/**
  * @param {string} source
  */
 export default async function loader(source) {
@@ -39,7 +44,7 @@ export default async function loader(source) {
 		const eikConfig = await helpers.getDefaults(pPath);
 
 		// Merge map from eik config and the plugin options and Fetch all import maps over http
-		const fetchedMaps = await utils.fetchImportMaps([
+		const fetchedMaps = await helpers.fetchImportMaps([
 			...eikConfig.map,
 			...urls,
 		]);

@@ -38,24 +38,26 @@
   },
   "homepage": "https://github.com/eik-lib/webpack-plugin#readme",
   "devDependencies": {
-    "@eik/eslint-config": "1.0.13",
+    "@eik/eslint-config": "1.0.15",
     "@eik/prettier-config": "1.0.1",
     "@eik/semantic-release-config": "1.0.2",
     "@eik/typescript-config": "1.0.0",
-    "eslint": "9.25.1",
-    "fastify": "4.28.1",
-    "memfs": "4.14.0",
-    "npm-run-all2": "5.0.2",
-    "prettier": "3.3.3",
+    "eslint": "9.26.0",
+    "fastify": "5.3.2",
+    "memfs": "4.17.1",
+    "npm-run-all2": "8.0.1",
+    "prettier": "3.5.3",
     "rimraf": "6.0.1",
     "semantic-release": "24.2.3",
-    "tap": "21.0.1",
-    "typescript": "5.5.4",
-    "webpack": "5.93.0",
-    "webpack-cli": "5.1.4"
+    "tap": "21.1.0",
+    "typescript": "5.8.3",
+    "webpack": "5.99.8",
+    "webpack-cli": "6.0.1"
   },
   "dependencies": {
-    "@eik/common": "3.0.1",
-    "undici": "6.21.2"
+    "@eik/common": "5.1.0"
+  },
+  "engines": {
+    "node": ">=20"
   }
 }
