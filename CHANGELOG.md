@@ -1,3 +1,15 @@
+# [3.0.0](https://github.com/eik-lib/webpack-plugin/compare/v2.0.8...v3.0.0) (2025-05-08)
+
+
+### Bug Fixes
+
+* update eik/common for shared map loader ([#170](https://github.com/eik-lib/webpack-plugin/issues/170)) ([54ffc45](https://github.com/eik-lib/webpack-plugin/commit/54ffc458d394ddf20d1551db7203b48771d8db1d))
+
+
+### BREAKING CHANGES
+
+* Drop support for Node 18.
+
 ## [2.0.8](https://github.com/eik-lib/webpack-plugin/compare/v2.0.7...v2.0.8) (2025-03-17)
 
 
