@@ -38,7 +38,7 @@
   },
   "homepage": "https://github.com/eik-lib/webpack-plugin#readme",
   "devDependencies": {
-    "@eik/eslint-config": "1.0.15",
+    "@eik/eslint-config": "1.0.16",
     "@eik/prettier-config": "1.0.1",
     "@eik/semantic-release-config": "1.0.2",
     "@eik/typescript-config": "1.0.0",
