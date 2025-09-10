@@ -1,6 +1,6 @@
 {
   "name": "@eik/webpack-plugin",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "description": "WebPack plugin for loading import maps from an Eik server and applying the mapping to ECMAScript modules in preparation for upload to the same server.",
   "type": "module",
   "main": "./src/loader.js",
