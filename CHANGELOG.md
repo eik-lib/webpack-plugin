@@ -1,3 +1,10 @@
+## [3.0.8](https://github.com/eik-lib/webpack-plugin/compare/v3.0.7...v3.0.8) (2026-02-05)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @eik/common to v5.1.15 ([#200](https://github.com/eik-lib/webpack-plugin/issues/200)) ([35f5b90](https://github.com/eik-lib/webpack-plugin/commit/35f5b90a717aa3e2498fc6e43a2a27b48808a2b4))
+
 ## [3.0.7](https://github.com/eik-lib/webpack-plugin/compare/v3.0.6...v3.0.7) (2026-01-12)
 
 
