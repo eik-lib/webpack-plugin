@@ -55,7 +55,7 @@
     "webpack-cli": "6.0.1"
   },
   "dependencies": {
-    "@eik/common": "5.1.13"
+    "@eik/common": "5.1.15"
   },
   "engines": {
     "node": ">=20"
