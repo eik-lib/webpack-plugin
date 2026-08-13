@@ -15,6 +15,7 @@ let cold = true;
  */
 
 /**
+ * @this {import('webpack').LoaderContext<any>}
  * @param {string} source
  */
 export default async function loader(source) {
@@ -50,8 +51,7 @@ export default async function loader(source) {
 		]);
 
 		// Validate each import map and push each import statement into a dictionary
-		maps
-			.concat(fetchedMaps)
+		[...maps, ...fetchedMaps]
 			.map((item) => utils.validate(item))
 			.forEach((item) => {
 				item.forEach((obj) => {
