@@ -52,7 +52,7 @@
     "tap": "21.7.5",
     "typescript": "7.0.2",
     "webpack": "5.109.2",
-    "webpack-cli": "7.2.2"
+    "webpack-cli": "7.2.3"
   },
   "dependencies": {
     "@eik/common": "5.2.1"
